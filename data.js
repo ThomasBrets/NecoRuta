@@ -1,5 +1,7 @@
-export const trasportdata = [
+const transportData = [
     {
         
     }
 ]
+
+export default transportData

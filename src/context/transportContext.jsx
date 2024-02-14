@@ -1,7 +1,7 @@
 import { createContext, useState } from "react";
 
 // Data
-import { transportData } from "../../data";
+import transportData from "../../data";
 
 // Create context
 export const transportContext = createContext();
@@ -15,3 +15,5 @@ const transportProvider = ({ children }) => {
     </transportContext.Provider>
   );
 };
+
+export default transportProvider;
