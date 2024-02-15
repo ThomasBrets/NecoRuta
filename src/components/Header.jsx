@@ -1,9 +1,14 @@
-import React from 'react'
+// React
+import React, { useState, useEffect } from "react";
+
+// Logo
+
+
+// Utils
+import { scrollToSection } from "../utils/scrollToSection";
 
 const Header = () => {
-  return (
-    <div>Header</div>
-  )
-}
+  return <div>Header</div>;
+};
 
-export default Header
+export default Header;
