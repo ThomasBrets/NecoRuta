@@ -1,8 +1,13 @@
 import React from 'react'
 
+// Components
+import HeroSlider from '../components/HeroSlider'
+
 const Home = () => {
   return (
-    <div>Home</div>
+    <>
+    <HeroSlider/>
+    </>
   )
 }
 
