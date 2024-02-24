@@ -19,7 +19,7 @@ const Header = () => {
   })
 
   return (
-  <header className={`${header ? "bg-primary py-6 shadow-lg" : "bg-transparent py-8"}fixed z-50 w-full transition-all duration-500`}>
+  <header className={`${header ? "bg-primary py-6 shadow-lg" : "bg-transparent py-8"} fixed z-50 w-full transition-all duration-500`}>
     <div className="container m-auto flex flex-col items-center gap-y-6 lg:flex-row lg:justify-between lg:gap-y-0">
       {/* logo */}
       <a href="/">
