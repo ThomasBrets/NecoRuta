@@ -20,39 +20,34 @@ import img9 from "../assets/img/9.jpg";
 import img10 from "../assets/img/10.jpg";
 import img11 from "../assets/img/11.jpg";
 import ofi1 from "../assets/ofi/ofi1.jpg";
-import ofi2 from "../assets/ofi/ofi2.jpg";
+
 
 // Slides
 const slides = [
   {
     title: "NecoRuta S.A.",
     bg: ofi1,
-    btnText: "Desde 2009 brindando servivios de transporte de carga",
-  },
-  {
-    title: "NecoRuta S.A.",
-    bg: ofi2,
-    btnText: "Desde 2009 brindando servivios de transporte de carga",
+    btnText: "Nuestra Flota",
   },
   {
     title: "NecoRuta S.A.",
     bg: img9,
-    btnText: "Desde 2009 brindando servivios de transporte de carga",
+    btnText: "Nuestra Flota",
   },
   {
     title: "NecoRuta S.A.",
     bg: img5,
-    btnText: "Desde 2009 brindando servivios de transporte de carga",
+    btnText: "Nuestra Flota",
   },
   {
     title: "NecoRuta S.A.",
     bg: img10,
-    btnText: "Desde 2009 brindando servivios de transporte de carga",
+    btnText: "Nuestra Flota",
   },
   {
     title: "NecoRuta S.A.",
     bg: img11,
-    btnText: "Desde 2009 brindando servivios de transporte de carga",
+    btnText: "Nuestra Flota",
   },
 ];
 
@@ -70,7 +65,24 @@ const HeroSlider = () => {
 
         return (
         <SwiperSlide key={index} className="h-full bg-orange-400 relative flex justify-center items-center">
-          
+          {/* title and button */}
+          <div className="z-20 text-white text-center">
+          <div className="uppercase font-primary tracking-[6px] mb-5">
+            Desde 2009 brindando servicios de transporte de carga
+          </div>
+          <h1 className="uppercase font-primary tracking-[2px] text-[32px] max-w-[920px] lg:text-[68px]">
+            {title}
+          </h1>
+          <button className="btn btn-primary btn-lg mx-auto rounded" onClick={() => scrollToSection("#flota")} >
+            {btnText}
+          </button>
+          </div>
+          {/* carrusel */}
+          <div className="absolute top-0 h-full w-full">
+            <img className="object-cover h-full w-full" src={bg} alt="" />
+          </div>
+          {/* overlay */}
+          <div className="absolute h-full w-full bg-black/70"></div>
         </SwiperSlide>
         ) 
       })}
