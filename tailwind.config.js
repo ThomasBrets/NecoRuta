@@ -8,6 +8,11 @@ export default {
     fontFamily: {
       primary: "DM Serif Display",
     },
+    container: {
+      padding: {
+        DEFAULT: '15px',
+      },
+    },
     screens: {
       sm: '640px',
       md: '768px',
@@ -17,7 +22,9 @@ export default {
     extend: {
       colors:{
         primary: "#3e4095",
-        hover: "#8484b9",
+        hover: "#5153a0",
+        secondHover:"#b2b3d5",
+        navHover:"#a3adb5"
       }
     },
   },
