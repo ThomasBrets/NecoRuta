@@ -21,7 +21,7 @@ const Header = () => {
   return (
     <header
       className={`${
-        header ? "bg-primary py-4 shadow-lg" : "bg-transparent py-6"
+        header ? "bg-primary py-3 shadow-lg" : "bg-transparent py-6"
       } fixed z-50 w-full transition-all duration-500`}
     >
       <div className="container m-auto flex flex-col items-center gap-y-6 lg:flex-row lg:justify-between lg:gap-y-0">

@@ -2,13 +2,13 @@ import React from 'react'
 
 // Components
 import HeroSlider from '../components/HeroSlider'
-import Flota from '../components/Flota'
+import Transportes from '../components/Transportes'
 
 const Home = () => {
   return (
     <>
     <HeroSlider/>
-    <Flota/>
+    <Transportes/>
     </>
   )
 }
