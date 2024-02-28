@@ -19,35 +19,29 @@ import img5 from "../assets/img/5.jpg";
 import img9 from "../assets/img/9.jpg";
 import img10 from "../assets/img/10.jpg";
 import img11 from "../assets/img/11.jpg";
-import ofi1 from "../assets/ofi/ofi1.jpg";
 
 
 // Slides
 const slides = [
   {
     title: "NecoRuta S.A.",
-    bg: ofi1,
-    btnText: "Nuestra Flota",
-  },
-  {
-    title: "NecoRuta S.A.",
     bg: img9,
-    btnText: "Nuestra Flota",
+    btnText: "Transportes",
   },
   {
     title: "NecoRuta S.A.",
     bg: img5,
-    btnText: "Nuestra Flota",
+    btnText: "Transportes",
   },
   {
     title: "NecoRuta S.A.",
     bg: img10,
-    btnText: "Nuestra Flota",
+    btnText: "Transportes",
   },
   {
     title: "NecoRuta S.A.",
     bg: img11,
-    btnText: "Nuestra Flota",
+    btnText: "Transportes",
   },
 ];
 
@@ -73,7 +67,7 @@ const HeroSlider = () => {
           <h1 className="uppercase font-primary tracking-[2px] text-[32px] max-w-[920px] lg:text-[68px]">
             {title}
           </h1>
-          <button className="btn btn-primary btn-lg mx-auto rounded" onClick={() => scrollToSection("#flota")} >
+          <button className="btn btn-primary btn-lg mx-auto rounded" onClick={() => scrollToSection("#transportes")} >
             {btnText}
           </button>
           </div>
