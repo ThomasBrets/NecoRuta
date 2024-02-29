@@ -19,6 +19,8 @@ import img5 from "../assets/img/5.jpg";
 import img9 from "../assets/img/9.jpg";
 import img10 from "../assets/img/10.jpg";
 import img11 from "../assets/img/11.jpg";
+import img8 from "../assets/img/8.jpg";
+import img4 from "../assets/img/4.jpg";
 
 
 // Slides
@@ -41,6 +43,16 @@ const slides = [
   {
     title: "NecoRuta S.A.",
     bg: img11,
+    btnText: "Transportes",
+  },
+  {
+    title: "NecoRuta S.A.",
+    bg: img8,
+    btnText: "Transportes",
+  },
+    {
+    title: "NecoRuta S.A.",
+    bg: img4,
     btnText: "Transportes",
   },
 ];

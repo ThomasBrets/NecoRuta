@@ -19,4 +19,7 @@
       .btn-white {
         @apply bg-white text-[#0a0a0a];
       }
+      .h3 {
+        @apply text-2xl font-primary font-semibold tracking-[1px];
+      }
 }

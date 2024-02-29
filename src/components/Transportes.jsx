@@ -10,10 +10,10 @@ const Transportes = () => {
   const { transport } = useContext(transportContext);
 
   return (
-    <section id="#transportes" className="py-24">
-      <div className="container mx-auto lg:px-0 bg-slate-500">
+    <section id="#transportes" className="py-20">
+      <div className="container mx-auto lg:px-0">
         <div className="text-center">
-          <div className="font-primary uppercase tracking-[6px] text-[15px]">
+          <div className="font-primary uppercase tracking-[6px] text-[18px]">
             Necoruta S.A.
           </div>
           <div className="font-primary text-[45px] mb-4">Transportes</div>
