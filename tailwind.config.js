@@ -27,6 +27,9 @@ export default {
         navHover:"#a3adb5"
       }
     },
+    backgroundImage:{
+      oficina:"url('./assets/ofi/ofi1.jpg')"
+    }
   },
   plugins: [],
 }

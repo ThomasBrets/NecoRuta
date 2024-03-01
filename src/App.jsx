@@ -3,6 +3,7 @@ import "./App.css";
 // Pages
 import Home from "./pages/Home";
 import Contacts from "./pages/Contacts";
+import TransporteDetails from "./pages/TransporteDetails";
 
 // Components
 import Header from "./components/Header";
@@ -18,6 +19,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/contacts" element={<Contacts />} />
+        <Route path="/contacts/:name" element={<TransporteDetails />} />
       </Routes>
       <Footer/>
     </div>
