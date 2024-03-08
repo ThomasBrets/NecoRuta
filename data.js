@@ -5,37 +5,51 @@ import Img6 from "./src/assets/img/6.jpg"; //Fertil
 import Img9 from "./src/assets/img/9.jpg"; //Cereal
 import Img10 from "./src/assets/img/10.jpg"; //Sebo
 
-const transportData = [
-    {
-        id: 1,
-        name: "Rendering",
-        description: "Transporte de subproductos animales (desechos), grasas y proteínas, a planta de reciclaje.",
-        img: Img10
-    },
-    {
-        id: 2,
-        name: "Cereal",
-        description: "Transporte de carga de Cereal desde campo a planta y/o puerto. Transporte de semillas de planta a campo.",
-        img: Img9
-    },
-    {
-        id: 3,
-        name: "Fertilizantes",
-        description: "Transporte de distintos Fertilizantes solidos y liquidos desde planta a campo y/o puerto.",
-        img: Img6
-    },
-    {
-        id: 4,
-        name: "Alimento",
-        description: "Transporte de Alimento Balanceado para Ganado, a granel o paletizado en bolsa, desde planta a campo.",
-        img: Img2
-    },
-    {
-        id: 5,
-        name: "Sebo Liquido y Harina",
-        description: "Transporte de Sebo Liquido y de Harinas de hueso, carne, de planta a campo y/o planta.",
-        img: Img5
-    },
-]
+export const transportData = [
+  {
+    id: 1,
+    name: "Rendering",
+    description:
+      "Transporte de subproductos animales (desechos), grasas y proteínas, a planta de reciclaje.",
+    img: Img10,
+  },
+  {
+    id: 2,
+    name: "Cereal",
+    description:
+      "Transporte de carga de Cereal desde campo a planta y/o puerto. Transporte de semillas de planta a campo.",
+    img: Img9,
+  },
+  {
+    id: 3,
+    name: "Fertilizantes",
+    description:
+      "Transporte de distintos Fertilizantes solidos y liquidos desde planta a campo y/o puerto.",
+    img: Img6,
+  },
+  {
+    id: 4,
+    name: "Alimento",
+    description:
+      "Transporte de Alimento Balanceado para Ganado, a granel o paletizado en bolsa, desde planta a campo.",
+    img: Img2,
+  },
+  {
+    id: 5,
+    name: "Sebo Liquido y Harina",
+    description:
+      "Transporte de Sebo Liquido y de Harinas de hueso, carne, de planta a campo y/o planta.",
+    img: Img5,
+  },
+];
 
-export default transportData
+export const officeData = {
+  id: 1,
+  direccion: "Calle 39 Nº 3545",
+  ciudad: "Necochea - CP 7630",
+  provincia: "Pcia. Buenos Aires",
+  email: "transporte@necoruta.com.ar",
+  logistica: "logística: +54 9 2262 645904",
+  administracion: "administración: +54 9 2262 589166",
+};
+
