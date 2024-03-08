@@ -1,4 +1,12 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useRef } from "react";
+
+// framer-motion
+import { motion } from "framer-motion";
+import { slideIn } from "../utils/motion";
+import { SectionWrapper } from "../hoc";
+
+// email.js
+import emailjs from "emailjs-com";
 
 // useParams
 import { useParams } from "react-router-dom";
@@ -16,6 +24,19 @@ import Flota from "../assets/college/Flota.jpg";
 import { FaCheck } from "react-icons/fa";
 
 const Contacts = () => {
+  const formRef = useRef();
+  const [form, setForm] = useState({
+    name: "",
+    affair: "",
+    email: "",
+    message: "",
+  });
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {};
+
+  const handleSubmit = (e) => {};
+
   const { office } = useContext(transportContext);
   console.log("OFFICE", office);
 
@@ -51,13 +72,16 @@ const Contacts = () => {
       {/* Flota y Contacto */}
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row h-full py-24">
-          {/* left */}
+          {/* left (Flota)*/}
           <div className="w-full h-full lg:w-[40%] text-justify px-6">
-            <h2 className="h2 text-center tracking-[2px] font-semibold">Nuestra Flota</h2>
+            <h2 className="h2 text-center tracking-[2px] font-semibold">
+              Nuestra Flota
+            </h2>
             <img className="mb-8" alt="flota" src={Flota} />
             <ul className="flex flex-col gap-y-4 text-[21px] font-semibold">
               <li className="flex items-center gap-x-4 font-primary tracking-[1px]">
-                <FaCheck className="text-primary w-[24px] h-[24px]" />5 Camiones propios.
+                <FaCheck className="text-primary w-[24px] h-[24px]" />5 Camiones
+                propios.
               </li>
               <li className="flex items-center gap-x-4 font-primary tracking-[1px]">
                 <FaCheck className="text-primary w-[24px] h-[24px]" />
@@ -77,9 +101,23 @@ const Contacts = () => {
               </li>
             </ul>
           </div>
-          {/* right */}
-          <div className="w-full h-full lg:w-[60%] bg-slate-500">
-            hola
+          {/* right (Contacto) */}
+          <div className="w-full h-full lg:w-[60%] overflow-hidden flex-col">
+            <motion.div
+              variants={slideIn("right", "tween", 0.2, 1)}
+              className="p-8 flex-[0.75]  rounded-2xl bg-primary"
+            >
+              <p className="font-primary uppercase tracking-[6px] text-[18px]">
+                Póngase en contacto
+              </p>
+              <h3 className="h3">Hablemos</h3>
+
+              <form
+                ref={formRef}
+                onSubmit={handleSubmit}
+                className="mt-12 flex flex-col gap-8"
+              ></form>
+            </motion.div>
           </div>
         </div>
       </div>
@@ -87,4 +125,4 @@ const Contacts = () => {
   );
 };
 
-export default Contacts;
+export default SectionWrapper(Contacts, "");
