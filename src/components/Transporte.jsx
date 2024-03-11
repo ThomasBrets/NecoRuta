@@ -1,13 +1,46 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 // Link
 import { Link } from "react-router-dom";
 
-const Transporte = ({ transporte }) => {
+// Framer-motion
+import { motion } from "framer-motion";
+
+// Utils
+import { cardVariants, fadeIn } from "../utils/motion";
+
+const Transporte = ({ transporte, index }) => {
   // console.log("TRANSPORTE", transporte);
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const section = document.getElementById('transportCards');
+      if (section) {
+        const sectionTop = section.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        setIsVisible(sectionTop < windowHeight * 0.75);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Llama a handleScroll una vez al principio para inicializar isVisible
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+
+
   const { id, name, description, img } = transporte;
   return (
-    <div className="min-h-[500px] bg-white shadow-2xl rounded-lg group">
+    <motion.div 
+    id="transportCards"
+    variants={cardVariants(index * 0.4, isVisible)}
+    initial="hidden"
+    animate="show"
+    className="min-h-[430px] bg-white shadow-2xl rounded-lg group">
       {/* img */}
       <div className="overflow-hidden">
         <img
@@ -24,7 +57,7 @@ const Transporte = ({ transporte }) => {
       </div>
 
       {/* description */}
-      <div className="text-center">
+      <div className="text-justify">
         <p className="font-primary max-w-[300px] mx-auto mb-3 lg:mb-6">{description}</p>
       </div>
 
@@ -32,7 +65,8 @@ const Transporte = ({ transporte }) => {
       <Link to={`/contacts/${name}`} className="btn btn-primary btn-sm max-w-[240px] mx-auto mb-3 lg:mb-6 rounded-lg">
         Hablemos
       </Link>
-    </div>
+    </motion.div>
+      
   );
 };
 
