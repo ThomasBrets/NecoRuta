@@ -1,9 +1,7 @@
-import React, { useContext, useState, useRef } from "react";
+import React, { useContext, useState, useRef, useEffect } from "react";
 
 // framer-motion
 import { motion } from "framer-motion";
-import { slideIn } from "../utils/motion";
-import { SectionWrapper } from "../hoc";
 
 // email.js
 import emailjs from "emailjs-com";
@@ -32,6 +30,24 @@ const Contacts = () => {
     message: "",
   });
   const [loading, setLoading] = useState(false);
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const section = document.getElementById("hablemos");
+      if (section) {
+        const sectionTop = section.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        setIsVisible(sectionTop < windowHeight * 0.75);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const handleChange = (e) => {};
 
@@ -71,9 +87,18 @@ const Contacts = () => {
       </div>
       {/* Flota y Contacto */}
       <div className="container mx-auto">
-        <div className="flex flex-col lg:flex-row h-[full] py-24 gap-x-8">
+        <div
+          id="hablemos"
+          className="flex flex-col lg:flex-row h-[full] py-24 gap-8"
+        >
           {/* left (Flota)*/}
-          <div className="w-full h-full lg:w-[50%] text-justify px-6 border-2 border-primary rounded-2xl p-8">
+          <motion.div
+            initial={{ x: "-100%", opacity: 0 }}
+            animate={{ x: isVisible ? 0 : "-100%", opacity: isVisible ? 1 : 0 }}
+            transition={{ duration: 1.5 }}
+            viewport={{ once: true }}
+            className="w-full h-full lg:w-[50%] text-justify px-6 border-2 border-primary rounded-2xl p-8"
+          >
             <h2 className="h2 text-center tracking-[2px] font-semibold">
               Nuestra Flota
             </h2>
@@ -100,11 +125,14 @@ const Contacts = () => {
                 Tanque y Bateas.
               </li>
             </ul>
-          </div>
+          </motion.div>
           {/* right (Contacto) */}
           <div className="w-full h-full lg:w-[50%] overflow-hidden flex-col">
             <motion.div
-              variants={slideIn("right", "tween", 0.2, 1)}
+            initial={{ x: "100%", opacity: 0 }}
+            animate={{ x: isVisible ? 0 : "100%", opacity: isVisible ? 1 : 0 }}
+            transition={{ duration: 1.5 }}
+            viewport={{ once: true }}
               className="p-8 flex-[0.75]  rounded-2xl bg-navHover text-primary"
             >
               <p className="font-primary uppercase tracking-[6px] text-[18px]">
@@ -115,7 +143,7 @@ const Contacts = () => {
               <form
                 ref={formRef}
                 onSubmit={handleSubmit}
-                className="mt-12 flex flex-col gap-8"
+                className="mt-10 flex flex-col gap-8"
               >
                 <label className="flex flex-col">
                   <span className="text-primary font-primary font-semibold mb-2">
@@ -127,7 +155,7 @@ const Contacts = () => {
                     value={form.name}
                     onChange={handleChange}
                     placeholder="Como es tu nombre?"
-                    className="bg-white rounded-lg py-2 px-4 placeholder:font-primary placeholder:font-semibold outlined-none border-none font-primary font-medium"
+                    className="bg-white rounded-lg py-2 px-4 placeholder:font-primary placeholder:font-semibold outline-none border-none font-primary font-medium"
                   />
                 </label>
                 <label className="flex flex-col">
@@ -140,7 +168,7 @@ const Contacts = () => {
                     value={form.affair}
                     onChange={handleChange}
                     placeholder="Motivo de contacto"
-                    className="bg-white rounded-lg py-2 px-4 placeholder:font-primary placeholder:font-semibold outlined-none border-none font-primary font-medium"
+                    className="bg-white rounded-lg py-2 px-4 placeholder:font-primary placeholder:font-semibold outline-none border-none font-primary font-medium"
                   />
                 </label>
                 <label className="flex flex-col">
@@ -153,7 +181,7 @@ const Contacts = () => {
                     value={form.email}
                     onChange={handleChange}
                     placeholder="Como es tu email?"
-                    className="bg-white rounded-lg py-2 px-4 placeholder:font-primary placeholder:font-semibold outlined-none border-none font-primary font-medium"
+                    className="bg-white rounded-lg py-2 px-4 placeholder:font-primary placeholder:font-semibold outline-none border-none font-primary font-medium"
                   />
                 </label>
                 <label className="flex flex-col">
@@ -161,7 +189,7 @@ const Contacts = () => {
                     Tu Mensaje
                   </span>
                   <textarea
-                    rows="10"
+                    rows="8"
                     name="message"
                     value={form.message}
                     onChange={handleChange}
@@ -169,13 +197,13 @@ const Contacts = () => {
                     className="bg-white rounded-lg py-2 px-4 placeholder:font-primary placeholder:font-semibold outline-none border-none font-primary font-medium"
                   />
                 </label>
-              {/* button */}
-              <button
-              type="submit"
-              className="font-primary font-bold outline-none w-fit py-2 px-5 shadow-lg  bg-primary text-secondHover rounded-xl"
-              >
-                {loading ? "Sending..." : "Send"} 
-              </button>
+                {/* button */}
+                <button
+                  type="submit"
+                  className="font-primary font-bold outline-none w-fit py-2 px-5 shadow-lg  bg-primary text-secondHover rounded-xl"
+                >
+                  {loading ? "Sending..." : "Send"}
+                </button>
               </form>
             </motion.div>
           </div>
@@ -185,4 +213,4 @@ const Contacts = () => {
   );
 };
 
-export default SectionWrapper(Contacts, "");
+export default Contacts;
