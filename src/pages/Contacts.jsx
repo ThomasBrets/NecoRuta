@@ -49,9 +49,40 @@ const Contacts = () => {
     };
   }, []);
 
-  const handleChange = (e) => {};
 
-  const handleSubmit = (e) => {};
+  // ? Email.js
+  // service_yg1cjh5    service
+  // template_90s22tr   template
+  // I0HKJXCi0LUCo0WFS  key
+
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    setForm({ ...form, [name]: value})
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true)
+
+    emailjs.send(
+      "service_yg1cjh5",
+      "template_90s22tr",
+      {
+        from_name: form.name,
+        to_name: "Necoruta",
+        affair: form.affair,
+        from_email: form.email,
+        to_email: "transportes@necoruta.com.ar",
+        message: form.message,
+      },
+      "I0HKJXCi0LUCo0WFS"
+    ).then(() => {
+      setLoading(false)
+      alert("")
+    })
+  };
 
   const { office } = useContext(transportContext);
   console.log("OFFICE", office);
