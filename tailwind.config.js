@@ -28,7 +28,8 @@ export default {
       }
     },
     backgroundImage:{
-      oficina:"url('./assets/ofi/ofi1.jpg')"
+      oficina:"url('./assets/ofi/ofi1.jpg')",
+      camiones:"url('./assets/img/11.jpg')"
     }
   },
   plugins: [],

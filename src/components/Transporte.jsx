@@ -62,7 +62,7 @@ const Transporte = ({ transporte, index }) => {
       </div>
 
       {/* button */}
-      <Link to={`/contacts/${name}`} className="btn btn-primary btn-sm max-w-[240px] mx-auto mb-3 lg:mb-6 rounded-lg">
+      <Link to={`/contacts/${id}`} className="btn btn-primary btn-sm max-w-[240px] mx-auto mb-3 lg:mb-6 rounded-lg">
         Hablemos
       </Link>
     </motion.div>
