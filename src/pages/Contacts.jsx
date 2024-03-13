@@ -49,43 +49,57 @@ const Contacts = () => {
     };
   }, []);
 
-
   // ? Email.js
-  // service_yg1cjh5    service
-  // template_90s22tr   template
+  // service_98g7c4h    service
+  // template_7g4ytv7   template
   // I0HKJXCi0LUCo0WFS  key
-
 
   const handleChange = (e) => {
     const { name, value } = e.target;
 
-    setForm({ ...form, [name]: value})
+    setForm({ ...form, [name]: value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setLoading(true)
+    setLoading(true);
 
-    emailjs.send(
-      "service_yg1cjh5",
-      "template_90s22tr",
-      {
-        from_name: form.name,
-        to_name: "Necoruta",
-        affair: form.affair,
-        from_email: form.email,
-        to_email: "transportes@necoruta.com.ar",
-        message: form.message,
-      },
-      "I0HKJXCi0LUCo0WFS"
-    ).then(() => {
-      setLoading(false)
-      alert("")
-    })
+    emailjs
+      .send(
+        "service_98g7c4h",
+        "template_7g4ytv7",
+        {
+          from_name: form.name,
+          to_name: "Necoruta",
+          affair: form.affair,
+          from_email: form.email,
+          to_email: "transportes@necoruta.com.ar",
+          message: form.message,
+        },
+        "I0HKJXCi0LUCo0WFS"
+      )
+      .then(() => {
+        setLoading(false);
+        alert(
+          "¡Gracias por tu mensaje! Nos pondremos en contacto contigo lo antes posible."
+        );
+
+        setForm({
+          name: "",
+          affair: "",
+          email: "",
+          message: "",
+        });
+      })
+      .catch((err) => {
+        setLoading(false);
+        console.log("ERROR => ", err);
+        alert("Ups! Hubo un problema al enviar el mensaje");
+      });
   };
 
   const { office } = useContext(transportContext);
-  console.log("OFFICE", office);
+  // console.log("OFFICE", office);
 
   const { direccion, ciudad, provincia, email, logistica, administracion } =
     office;
@@ -160,10 +174,13 @@ const Contacts = () => {
           {/* right (Contacto) */}
           <div className="w-full h-full lg:w-[50%] overflow-hidden flex-col">
             <motion.div
-            initial={{ x: "100%", opacity: 0 }}
-            animate={{ x: isVisible ? 0 : "100%", opacity: isVisible ? 1 : 0 }}
-            transition={{ duration: 1.5 }}
-            viewport={{ once: true }}
+              initial={{ x: "100%", opacity: 0 }}
+              animate={{
+                x: isVisible ? 0 : "100%",
+                opacity: isVisible ? 1 : 0,
+              }}
+              transition={{ duration: 1.5 }}
+              viewport={{ once: true }}
               className="p-8 flex-[0.75]  rounded-2xl bg-navHover text-primary"
             >
               <p className="font-primary uppercase tracking-[6px] text-[18px]">
