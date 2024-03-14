@@ -40,7 +40,7 @@ const Transporte = ({ transporte, index }) => {
     variants={cardVariants(index * 0.4, isVisible)}
     initial="hidden"
     animate="show"
-    className="min-h-[430px] bg-white shadow-2xl rounded-lg group">
+    className="min-h-[500px] bg-white shadow-2xl rounded-lg group">
       {/* img */}
       <div className="overflow-hidden">
         <img
