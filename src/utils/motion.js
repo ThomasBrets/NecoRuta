@@ -39,3 +39,29 @@ export const fadeIn = (direction, type, delay, duration) => {
     },
   };
 };
+
+export const titleVariants = {
+  hidden: {
+    y: -20,
+    opacity: 0,
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 1.2,
+      ease: "easeOut",
+    },
+  },
+};
+
+export const icon = {
+  hidden: {
+    pathLength: 0,
+    fill: "rgba(255, 255, 255, 0)"
+  },
+  visible: {
+    pathLength: 1,
+    fill: "rgba(255, 255, 255, 1)"
+  }
+}

@@ -28,7 +28,7 @@ const Header = () => {
         {/* logo */}
         <a href="/">
           {header ? (
-            <img className="w-[140px] bg-white p-1 rounded-lg" src={Logo} />
+            <img className="w-[100px] bg-white p-1 rounded-[100%]" src={RoundLogo} />
           ) : (
             <img className="w-[180px]" src={TransparentLogo} />
           )}
