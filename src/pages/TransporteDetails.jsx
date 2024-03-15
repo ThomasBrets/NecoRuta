@@ -23,9 +23,23 @@ import { FaCheck } from "react-icons/fa";
 
 const TransporteDetails = () => {
   const formRef = useRef();
+  const { transport } = useContext(transportContext);
+  // console.log("Transporte", transport);
+
+  const { id } = useParams();
+  // console.log("ID", id);
+
+  const transporte = transport.find((transporte) => {
+    return transporte.id === Number(id);
+  });
+
+  // console.log("TRANSPORTE", transporte);
+
+  const { name, description, img } = transporte;
+
   const [form, setForm] = useState({
     name: "",
-    affair: "",
+    affair: name,
     email: "",
     message: "",
   });
@@ -71,7 +85,7 @@ const TransporteDetails = () => {
         {
           from_name: form.name,
           to_name: "Necoruta",
-          affair: form.affair,
+          affair: name,
           from_email: form.email,
           to_email: "transportes@necoruta.com.ar",
           message: form.message,
@@ -86,7 +100,7 @@ const TransporteDetails = () => {
 
         setForm({
           name: "",
-          affair: "",
+          affair: name,
           email: "",
           message: "",
         });
@@ -98,19 +112,6 @@ const TransporteDetails = () => {
       });
   };
 
-  const { transport } = useContext(transportContext);
-  // console.log("Transporte", transport);
-
-  const { id } = useParams();
-  // console.log("ID", id);
-
-  const transporte = transport.find((transporte) => {
-    return transporte.id === Number(id);
-  });
-
-  // console.log("TRANSPORTE", transporte);
-
-  const { name, description, img } = transporte;
 
   return (
     <section>
@@ -137,13 +138,35 @@ const TransporteDetails = () => {
             viewport={{ once: true }}
             className="w-full h-full lg:w-[50%] text-justify px-6 border-2 border-primary rounded-2xl p-8"
           >
-            <h2 className="h2 text-center tracking-[2px] font-semibold">
+            <h2 className="font-primary text-[45px] text-primary text-center tracking-[2px] font-semibold">
               {name}
             </h2>
-            <img className="mb-8 rounded-xl" alt="flota" src={img} />
-            <div>
+            <div className="font-primary text-[20px] my-4">
               {description}
             </div>
+            <img className="mb-6 rounded-xl" alt="flota" src={img} />
+            <ul className="flex flex-col gap-y-4 text-[21px] font-semibold">
+              <li className="flex items-center gap-x-4 font-primary tracking-[1px]">
+                <FaCheck className="text-primary w-[24px] h-[24px]" />5 Camiones
+                propios.
+              </li>
+              <li className="flex items-center gap-x-4 font-primary tracking-[1px]">
+                <FaCheck className="text-primary w-[24px] h-[24px]" />
+                Equipos Autodescargables.
+              </li>
+              <li className="flex items-center gap-x-4 font-primary tracking-[1px]">
+                <FaCheck className="text-primary w-[24px] h-[24px]" />
+                Equipos Cerealeros.
+              </li>
+              <li className="flex items-center gap-x-4 font-primary tracking-[1px]">
+                <FaCheck className="text-primary w-[24px] h-[24px]" />
+                Tolvón para Alimento Balanceado.
+              </li>
+              <li className="flex items-center gap-x-4 font-primary tracking-[1px]">
+                <FaCheck className="text-primary w-[24px] h-[24px]" />
+                Tanque y Bateas.
+              </li>
+            </ul>
           </motion.div>
           {/* right (Contacto) */}
           <div className="w-full h-full lg:w-[50%] overflow-hidden flex-col">
