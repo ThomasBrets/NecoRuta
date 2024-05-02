@@ -48,7 +48,7 @@ const customIcon = new Icon({
 
 
 const Map = () => {
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState(false);
     const { markers, necoruta } = useContext(transportContext);
     // console.log("MARKERS", markers);
     // console.log("NECORUTA", necoruta);
@@ -58,7 +58,7 @@ const Map = () => {
     <div className="flex gap-6">
         <div
           className={`bg-primary min-h-screen ${
-            open ? "w-72" : "w-16 "
+            open ? "w-72" : "w-16"
           } duration-500 text-secondHover px-4`}
         >
           <div className="py-3 flex justify-end ">
