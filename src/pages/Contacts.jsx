@@ -21,6 +21,11 @@ import Flota from "../assets/college/Flota.jpg";
 // Icons
 import { FaCheck } from "react-icons/fa";
 
+// Components
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+
+
 const Contacts = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
@@ -105,10 +110,12 @@ const Contacts = () => {
     office;
 
   return (
+    <>
+    <Header/>
     <section>
       <ScrollToTop />
       {/* banner */}
-      <div className="bg-oficina bg-cover bg-center h-[560px] relative flex justify-center items-center">
+      <div className="bg-oficina bg-cover bg-center h-[560px] relative flex justify-center items-center shadow-2xl">
         {/* overlay */}
         <div className="bg-black/70 absolute h-full w-full" />
         <div className="text-white flex lg:mt-0 pt-[110px] lg:pt-0 flex-col justify-center items-center z-20">
@@ -147,12 +154,8 @@ const Contacts = () => {
             <h2 className="h2 text-center tracking-[2px] font-semibold">
               Nuestra Flota
             </h2>
-            <img className="mb-8" alt="flota" src={Flota} />
-            <ul className="flex flex-col gap-y-4 text-[21px] font-semibold">
-              <li className="flex items-center gap-x-4 font-primary tracking-[1px]">
-                <FaCheck className="text-primary w-[24px] h-[24px]" />5 Camiones
-                propios.
-              </li>
+            <img className="mb-12" alt="flota" src={Flota} />
+            <ul className="flex flex-col gap-y-6 text-[22px] font-semibold">
               <li className="flex items-center gap-x-4 font-primary tracking-[1px]">
                 <FaCheck className="text-primary w-[24px] h-[24px]" />
                 Equipos Autodescargables.
@@ -258,6 +261,8 @@ const Contacts = () => {
         </div>
       </div>
     </section>
+    <Footer/>
+    </>
   );
 };
 

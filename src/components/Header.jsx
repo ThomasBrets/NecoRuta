@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 // Logo
 import TransparentLogo from "../assets/logo/transparentLogo.png";
 import Logo from "../assets/logo/logo.jpg";
-import RoundLogo from "../assets/logo/roundLogo.jpg";
+import RoundLogo from "../assets/logo/roundLogo.png";
 
 // Utils
 import { scrollToSection } from "../utils/scrollToSection";
@@ -51,6 +51,14 @@ const Header = () => {
             } transition-all tracking-[1px] duration-500`}
           >
             Contacto
+          </a>
+          <a
+            href="/map"
+            className={`${
+              header ? "hover:text-secondHover" : "hover:text-navHover"
+            } transition-all tracking-[1px] duration-500`}
+          >
+            Mapa
           </a>
         </nav>
       </div>
