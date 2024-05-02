@@ -67,7 +67,7 @@ const HeroSlider = () => {
       effect={"fade"}
       loop={true}
       autoplay={{ delay: 3000, disableOnInteraction: false }}
-      className="heroSlider h-[600px] lg:h-[860px]"
+      className="heroSlider h-[600px] lg:h-[860px] shadow-2xl"
     >
       {slides.map((slide, index) => {
         const { title, bg, btnText } = slide;
@@ -85,7 +85,7 @@ const HeroSlider = () => {
                 animate="visible"
                 className="uppercase font-primary tracking-[6px] mb-5"
               >
-                Desde 2009 brindando servicios de transporte de carga
+                Desde 2009 brindamos servicios de transporte de cargas generales
               </motion.div>
               <motion.h1
                 variants={titleVariants}

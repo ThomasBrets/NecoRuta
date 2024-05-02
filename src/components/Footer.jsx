@@ -6,7 +6,7 @@ import { transportContext } from "../context/transportContext";
 // Logo
 import TransparentLogo from "../assets/logo/transparentLogo.png";
 import Logo from "../assets/logo/logo.jpg";
-import RoundLogo from "../assets/logo/roundLogo.jpg";
+import RoundLogo from "../assets/logo/roundLogo.png";
 
 const Footer = () => {
   const { office } = useContext(transportContext);

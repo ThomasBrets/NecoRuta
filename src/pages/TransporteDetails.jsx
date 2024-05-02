@@ -21,6 +21,9 @@ import Flota from "../assets/college/Flota.jpg";
 // Icons
 import { FaCheck } from "react-icons/fa";
 
+// Components
+import Header from "../components/Header"
+
 const TransporteDetails = () => {
   const formRef = useRef();
   const { transport } = useContext(transportContext);
@@ -114,6 +117,8 @@ const TransporteDetails = () => {
 
 
   return (
+    <>
+    <Header/>
     <section>
       <ScrollToTop />
       {/* banner */}
@@ -145,11 +150,7 @@ const TransporteDetails = () => {
               {description}
             </div>
             <img className="mb-6 rounded-xl" alt="flota" src={img} />
-            <ul className="flex flex-col gap-y-4 text-[21px] font-semibold">
-              <li className="flex items-center gap-x-4 font-primary tracking-[1px]">
-                <FaCheck className="text-primary w-[24px] h-[24px]" />5 Camiones
-                propios.
-              </li>
+            <ul className="flex flex-col gap-y-6 text-[22px] font-semibold">
               <li className="flex items-center gap-x-4 font-primary tracking-[1px]">
                 <FaCheck className="text-primary w-[24px] h-[24px]" />
                 Equipos Autodescargables.
@@ -255,6 +256,7 @@ const TransporteDetails = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 
