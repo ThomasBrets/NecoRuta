@@ -25,6 +25,10 @@ import { FaCheck } from "react-icons/fa";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
+// Logo
+import transparentLogo from "../assets/logo/transparentLogo.png";
+
+
 
 const Contacts = () => {
   const formRef = useRef();
@@ -149,30 +153,9 @@ const Contacts = () => {
             animate={{ x: isVisible ? 0 : "-100%", opacity: isVisible ? 1 : 0 }}
             transition={{ duration: 1.5 }}
             viewport={{ once: true }}
-            className="w-full h-full lg:w-[50%] text-justify px-6 border-2 border-primary rounded-2xl p-8"
+            className="w-full h-full lg:w-[50%] text-justify px-6 rounded-2xl p-8"
           >
-            <h2 className="h2 text-center tracking-[2px] font-semibold">
-              Nuestra Flota
-            </h2>
-            <img className="mb-12" alt="flota" src={Flota} />
-            <ul className="flex flex-col gap-y-6 text-[22px] font-semibold">
-              <li className="flex items-center gap-x-4 font-primary tracking-[1px]">
-                <FaCheck className="text-primary w-[24px] h-[24px]" />
-                Equipos Autodescargables.
-              </li>
-              <li className="flex items-center gap-x-4 font-primary tracking-[1px]">
-                <FaCheck className="text-primary w-[24px] h-[24px]" />
-                Equipos Cerealeros.
-              </li>
-              <li className="flex items-center gap-x-4 font-primary tracking-[1px]">
-                <FaCheck className="text-primary w-[24px] h-[24px]" />
-                Tolvón para Alimento Balanceado.
-              </li>
-              <li className="flex items-center gap-x-4 font-primary tracking-[1px]">
-                <FaCheck className="text-primary w-[24px] h-[24px]" />
-                Tanque y Bateas.
-              </li>
-            </ul>
+            <img src={transparentLogo} alt="" className=""/>
           </motion.div>
           {/* right (Contacto) */}
           <div className="w-full h-full lg:w-[50%] overflow-hidden flex-col">

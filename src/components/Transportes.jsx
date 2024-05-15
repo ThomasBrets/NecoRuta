@@ -17,7 +17,7 @@ const Transportes = () => {
           <div className="font-primary uppercase tracking-[6px] text-[18px]">
             Necoruta S.A.
           </div>
-          <div className="font-primary text-[45px] mb-4">Transportes</div>
+          <div className="font-primary text-[45px] mb-4">Servicios</div>
         </div>
         <div className="grid grid-cols-1 max-w-sm mt-[120px] mx-auto gap-[30px] lg:grid-cols-3 lg:max-w-none lg:mx-0">
           {transport.map((transporte, index) => {

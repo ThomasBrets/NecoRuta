@@ -2,10 +2,12 @@
 import Img2 from "./src/assets/img/2.jpg"; //Alimento
 import Img5 from "./src/assets/img/5.jpg"; //Sebo Liquido
 import Img6 from "./src/assets/img/6.jpg"; //Fertil
-import Img9 from "./src/assets/img/9.jpg"; //Cereal
-import Img10 from "./src/assets/img/10.jpg"; //Sebo
+import Img12 from "./src/assets/img/12.jpg"; //Cereal
+import Img16 from "./src/assets/img/16.jpg"; //Sebo 
 import Img14 from "./src/assets/img/14.jpg"; //Fertil
 import Img15 from "./src/assets/img/15.jpg"; //Sebo Liquido
+
+
 
 // import Icons
 import { FaMapMarkerAlt } from "react-icons/fa";
@@ -18,10 +20,10 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 export const transportData = [
   {
     id: 1,
-    name: "Rendering",
+    name: "Sebo",
     description:
       "Transporte de subproductos animales (desechos) a Planta de reciclaje. RENDERING",
-    img: Img10,
+    img: Img16,
   },
   {
     id: 2,
@@ -35,7 +37,7 @@ export const transportData = [
     name: "Harina de hueso y Carne",
     description:
       "Transporte de harina de hueso y carne de Planta recicladora directo al cliente.",
-    img: Img6,
+    img: Img15,
   },
   {
     id: 4,
@@ -49,21 +51,21 @@ export const transportData = [
     name: "Cereal",
     description:
       "Transporte de cereal desde Campo a Planta o Puerto",
-    img: Img14,
+    img: Img12,
   },
   {
     id: 6,
-    name: "Semillas y paletizado",
+    name: "Semilla",
     description:
       "Transporte de semillas, paletizado o autodescargable de Planta o Campo",
-    img: Img5,
+    img: Img14,
   },
   {
     id: 7,
     name: "Fertilizante",
     description:
       "Transporte de fertilizante líquido y sólido desde Planta o Puerto al Campo.",
-    img: Img10,
+    img: Img6,
   },
 ];
 
