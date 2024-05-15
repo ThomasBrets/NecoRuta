@@ -15,7 +15,7 @@ const Footer = () => {
   const { direccion, ciudad, provincia, email, logistica, administracion } =
     office;
   return (
-    <footer className="bg-primary py-8">
+    <footer className="bg-primary py-3">
       <div className="container mx-auto flex flex-col lg:flex-row items-center gap-4 lg:justify-between">
         <a href="/">
           <img

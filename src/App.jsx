@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Contacts from "./pages/Contacts";
 import TransporteDetails from "./pages/TransporteDetails";
 import Map from "./pages/Map";
+import Flota from "./pages/Flota";
 
 // Components
 import Footer from "./components/Footer";
@@ -29,6 +30,7 @@ function App() {
           <Route path="/contacts" element={<Contacts />} />
           <Route path="/contacts/:id" element={<TransporteDetails />} />
           <Route path="/map" element={<Map />} />
+          <Route path="/flota" element={<Flota />} />
         </Routes>
       </motion.div>
     </div>

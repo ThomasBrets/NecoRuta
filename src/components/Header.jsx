@@ -60,6 +60,14 @@ const Header = () => {
           >
             Mapa
           </a>
+          <a
+            href="/flota"
+            className={`${
+              header ? "hover:text-secondHover" : "hover:text-navHover"
+            } transition-all tracking-[1px] duration-500`}
+          >
+            Flota
+          </a>
         </nav>
       </div>
     </header>

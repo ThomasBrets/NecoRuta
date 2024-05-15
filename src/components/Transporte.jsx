@@ -50,19 +50,19 @@ const Transporte = ({ transporte, index }) => {
         />
       </div>
       {/* Title */}
-      <div className="bg-white shadow-lg max-w-[300px] -translate-y-1/2 mx-auto h-[60px] upercase flex justify-center items-center font-primary tracking-[1px] font-semibold rounded-lg">
+      {/* <div className="bg-white shadow-lg max-w-[300px] -translate-y-1/2 mx-auto h-[60px] upercase flex justify-center items-center font-primary tracking-[1px] font-semibold rounded-lg">
         <div className="flex justify-center w-[80%]">
           <h3 className="h3 uppercase">{name}</h3>
         </div>
-      </div>
+      </div> */}
 
       {/* description */}
-      <div className="text-justify">
-        <p className="font-primary max-w-[300px] mx-auto mb-3 lg:mb-6">{description}</p>
+      <div className="text-justify flex justify-center"> 
+        <p className="font-primary max-w-[300px] mx-auto mb-3 mt-5 relative">{description}</p>
       </div>
 
       {/* button */}
-      <Link to={`/contacts/${id}`} className="btn btn-primary btn-sm max-w-[240px] mx-auto mb-3 lg:mb-6 rounded-lg">
+      <Link to={`/contacts/${id}`} className="btn btn-primary btn-sm max-w-[240px] mx-auto rounded-lg absolute bottom-10 left-24 ">
         Hablemos
       </Link>
     </motion.div>

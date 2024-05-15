@@ -4,6 +4,8 @@ import Img5 from "./src/assets/img/5.jpg"; //Sebo Liquido
 import Img6 from "./src/assets/img/6.jpg"; //Fertil
 import Img9 from "./src/assets/img/9.jpg"; //Cereal
 import Img10 from "./src/assets/img/10.jpg"; //Sebo
+import Img14 from "./src/assets/img/14.jpg"; //Fertil
+import Img15 from "./src/assets/img/15.jpg"; //Sebo Liquido
 
 // import Icons
 import { FaMapMarkerAlt } from "react-icons/fa";
@@ -16,38 +18,52 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 export const transportData = [
   {
     id: 1,
-    name: "Sebo",
+    name: "Rendering",
     description:
-      "Transporte de subproductos animales (desechos), grasas y proteínas, a planta de reciclaje.",
+      "Transporte de subproductos animales (desechos) a Planta de reciclaje. RENDERING",
     img: Img10,
   },
   {
     id: 2,
-    name: "Cereal",
+    name: "Sebo Liquido",
     description:
-      "Transporte de carga de Cereal desde campo a planta y/o puerto. Transporte de semillas de planta a campo.",
-    img: Img9,
+      "Transporte de sebo liquido",
+    img: Img5,
   },
   {
     id: 3,
-    name: "Fertilizantes",
+    name: "Harina de hueso y Carne",
     description:
-      "Transporte de distintos Fertilizantes solidos y liquidos desde planta a campo y/o puerto.",
+      "Transporte de harina de hueso y carne de Planta recicladora directo al cliente.",
     img: Img6,
   },
   {
     id: 4,
     name: "Alimento",
     description:
-      "Transporte de Alimento Balanceado para Ganado, a granel o paletizado en bolsa, desde planta a campo.",
+      "Transporte de Alimento Balanceado a granel o paletizado en bolsas, desde Planta a Campo.",
     img: Img2,
   },
   {
     id: 5,
-    name: "Sebo Liquido y Harina",
+    name: "Cereal",
     description:
-      "Transporte de Sebo Liquido y de Harinas de hueso, carne, de planta a campo y/o planta.",
+      "Transporte de cereal desde Campo a Planta o Puerto",
+    img: Img14,
+  },
+  {
+    id: 6,
+    name: "Semillas y paletizado",
+    description:
+      "Transporte de semillas, paletizado o autodescargable de Planta o Campo",
     img: Img5,
+  },
+  {
+    id: 7,
+    name: "Fertilizante",
+    description:
+      "Transporte de fertilizante líquido y sólido desde Planta o Puerto al Campo.",
+    img: Img10,
   },
 ];
 
@@ -57,9 +73,9 @@ export const transportData = [
 export const officeData = {
   id: 1,
   direccion: "Calle 39 Nº 3545",
-  ciudad: "Necochea - CP 7630",
+  ciudad: "Necochea - CP 7630", 
   provincia: "Pcia. Buenos Aires",
-  email: "transporte@necoruta.com.ar",
+  email: "transportes@necoruta.com.ar",
   logistica: "logística: +54 9 2262 645904",
   administracion: "administración: +54 9 2262 589166",
 };
