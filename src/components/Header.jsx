@@ -45,12 +45,12 @@ const Header = () => {
             Inicio
           </a>
           <a
-            href="/contacts"
+            href="/flota"
             className={`${
               header ? "hover:text-secondHover" : "hover:text-navHover"
             } transition-all tracking-[1px] duration-500`}
           >
-            Contacto
+            Flota
           </a>
           <a
             href="/map"
@@ -61,12 +61,12 @@ const Header = () => {
             Mapa
           </a>
           <a
-            href="/flota"
+            href="/contacts"
             className={`${
               header ? "hover:text-secondHover" : "hover:text-navHover"
             } transition-all tracking-[1px] duration-500`}
           >
-            Flota
+            Contacto
           </a>
         </nav>
       </div>

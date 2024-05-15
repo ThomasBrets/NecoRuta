@@ -20,9 +20,10 @@ import { transportContext } from "../context/transportContext";
 
 // react-icons
 import { HiMenuAlt3 } from "react-icons/hi";
-import { FaMapMarkerAlt, FaHome } from "react-icons/fa";
+import { FaMapMarkerAlt, FaHome, FaTruck } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { TbNavigationNorth } from "react-icons/tb";
+
 
 // react-router-dom
 import { Link } from "react-router-dom";
@@ -83,8 +84,7 @@ const Map = () => {
               Bienvenido a la sección del mapa
             </p>
             <p className="text-sm">
-              Esta sección te permite explorar el mapa interactivo. Haz clic en
-              las ubicaciones para ver más detalles.
+              Esta sección te permite explorar el mapa interactivo indicando hasta donde llegan nuestros camiones.
             </p>
             <div className="">
               <button
@@ -138,6 +138,31 @@ const Map = () => {
                 } absolute left-48 z-30 bg-white font-extralight whitespace-pre text-primary rounded-md drop-shadow-lg px-0 py-0 w-0 overflow-hidden group-hover:px-2 group-hover:py-0 group-hover:left-14 group-hover:duration-300 group-hover:w-fit `}
               >
                 Inicio
+              </div>
+            </Link>
+            <Link
+              to="/Contacts"
+              className="group flex items-center gap-3.5 p-1 rounded-md hover:text-white hover:transition-all text-[19px]"
+            >
+              <div>
+                <FaTruck className="text-[25px]" />
+              </div>
+              <div
+                style={{
+                  transitionDelay: "200ms",
+                }}
+                className={` whitespace-pre duration-500 ${
+                  !open && " opacity-0 translate-x-28 overflow-hidden "
+                }  `}
+              >
+                Flota
+              </div>
+              <div
+                className={`${
+                  open && "hidden"
+                } absolute left-48 z-30 bg-white font-extralight whitespace-pre text-primary rounded-md drop-shadow-lg px-0 py-0 w-0 overflow-hidden group-hover:px-2 group-hover:py-0 group-hover:left-14 group-hover:duration-300 group-hover:w-fit `}
+              >
+                Flota
               </div>
             </Link>
             <Link
