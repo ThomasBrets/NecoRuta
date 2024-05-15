@@ -11,7 +11,7 @@ const Transportes = () => {
   const { transport } = useContext(transportContext);
 
   return (
-    <section id="#transportes" className="py-24">
+    <section id="#transportes" className="py-20">
       <div className="container mx-auto lg:px-0" >
         <div className="text-center">
           <div className="font-primary uppercase tracking-[6px] text-[18px]">
