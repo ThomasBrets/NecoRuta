@@ -1,7 +1,7 @@
 import { createContext, useState } from "react";
 
 // Data
-import {transportData, officeData, markersData, necorutaData} from "../../data";
+import {transportData, officeData, markersData, necorutaData, flotaData} from "../../data";
 
 // Create context
 export const transportContext = createContext();
@@ -11,9 +11,10 @@ const transportProvider = ({ children }) => {
   const [office, setOffice] = useState(officeData)
   const [markers, setMarkers] = useState(markersData)
   const [necoruta, setNecoruta] = useState(necorutaData)
+  const [flota, setFlota] = useState(flotaData)
 
   return (
-    <transportContext.Provider value={{ transport, office, markers, necoruta }}>
+    <transportContext.Provider value={{ transport, office, markers, necoruta, flota }}>
       {children}
     </transportContext.Provider>
   );
