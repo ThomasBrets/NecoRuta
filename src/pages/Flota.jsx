@@ -2,6 +2,8 @@ import React, { useContext, useState, useRef, useEffect } from "react";
 
 // framer-motion
 import { motion } from "framer-motion";
+import { titleVariants } from "../utils/motion";
+
 
 // email.js
 import emailjs from "emailjs-com";
@@ -24,6 +26,10 @@ import { FaCheck } from "react-icons/fa";
 // Components
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+
+// Components
+import FlotaSlider from "../components/FlotaSlider";
+
 
 
 const Contacts = () => {
@@ -114,12 +120,21 @@ const Contacts = () => {
     <Header/>
     <section>
       <ScrollToTop />
+      <motion.div
+                variants={titleVariants}
+                initial="hidden"
+                animate="visible"
+                className="uppercase font-primary tracking-[6px] mb-5"
+              >
       <div className="text-center">
           <div className="font-primary uppercase tracking-[6px] text-[18px] pt-[150px]">
             Necoruta S.A.
           </div>
           <div className="font-primary text-[45px] mb-4">Nuestra Flota</div>
         </div>
+        </motion.div>
+        {/* Swiper */}
+        <FlotaSlider/>
       {/* Flota y Contacto */}
       <div className="container mx-auto">
         <div

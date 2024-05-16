@@ -1,11 +1,22 @@
 // import images
-import Img2 from "./src/assets/img/2.jpg"; //Alimento
-import Img5 from "./src/assets/img/5.jpg"; //Sebo Liquido
-import Img6 from "./src/assets/img/6.jpg"; //Fertil
-import Img12 from "./src/assets/img/12.jpg"; //Cereal
-import Img16 from "./src/assets/img/16.jpg"; //Sebo 
-import Img14 from "./src/assets/img/14.jpg"; //Fertil
-import Img15 from "./src/assets/img/15.jpg"; //Sebo Liquido
+import Img1 from "./src/assets/img/1.jpg";
+import Img2 from "./src/assets/img/2.jpg"; 
+import Img3 from "./src/assets/img/3.jpg"; 
+import Img4 from "./src/assets/img/4.jpg"; 
+import Img5 from "./src/assets/img/5.jpg";  
+import Img6 from "./src/assets/img/6.jpg"; 
+import Img7 from "./src/assets/img/7.jpg"; 
+import Img8 from "./src/assets/img/8.jpg"; 
+import Img9 from "./src/assets/img/9.jpg"; 
+import Img10 from "./src/assets/img/10.jpg"; 
+import Img11 from "./src/assets/img/11.jpg"; 
+import Img12 from "./src/assets/img/12.jpg"; 
+import Img13 from "./src/assets/img/13.jpg"; 
+import Img14 from "./src/assets/img/14.jpg"; 
+import Img15 from "./src/assets/img/15.jpg"; 
+import Img16 from "./src/assets/img/16.jpg";  
+import Img17 from "./src/assets/img/17.jpg"; 
+import Img18 from "./src/assets/img/18.jpg";  
 
 
 
@@ -166,3 +177,67 @@ export const necorutaData = [
     popUp: "Necoruta",
   },
 ];
+
+
+
+
+// ? Flota
+
+export const flotaData = [
+  {
+    name: "Img1",
+    img: Img1,  
+  },
+  {
+    name: "Img2",
+    img: Img2,  
+  },
+  {
+    name: "Img4",
+    img: Img4,  
+  },
+  {
+    name: "Img5",
+    img: Img5,  
+  },
+  {
+    name: "Img6",
+    img: Img6,  
+  },
+  {
+    name: "Img8",
+    img: Img8,  
+  },
+  {
+    name: "Img9",
+    img: Img9,  
+  },
+  {
+    name: "Img10",
+    img: Img10,  
+  },
+  {
+    name: "Img11",
+    img: Img11,  
+  },
+  {
+    name: "Img13",
+    img: Img13,  
+  },
+  {
+    name: "Img14",
+    img: Img14,  
+  },
+  {
+    name: "Img15",
+    img: Img15,  
+  },
+  {
+    name: "Img17",
+    img: Img17,  
+  },
+  {
+    name: "Img18",
+    img: Img18,  
+  },
+]
