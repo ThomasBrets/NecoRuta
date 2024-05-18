@@ -1,0 +1,21 @@
+.blur-top {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 0;
+  right: 0;
+  height: 24px;
+  background: inherit;
+  filter: blur(12px);
+}
+
+.blur-bottom {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  right: 0;
+  height: 24px;
+  background: inherit;
+  filter: blur(12px);
+}

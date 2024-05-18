@@ -141,7 +141,7 @@ const Map = () => {
               </div>
             </Link>
             <Link
-              to="/Contacts"
+              to="/flota"
               className="group flex items-center gap-3.5 p-1 rounded-md hover:text-white hover:transition-all text-[19px]"
             >
               <div>
