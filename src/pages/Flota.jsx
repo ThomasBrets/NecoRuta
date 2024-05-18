@@ -46,7 +46,7 @@ const Contacts = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const section = document.getElementById("hablemos");
+      const section = document.getElementById("info");
       if (section) {
         const sectionTop = section.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
@@ -124,7 +124,7 @@ const Contacts = () => {
                 variants={titleVariants}
                 initial="hidden"
                 animate="visible"
-                className="uppercase font-primary tracking-[6px] mb-5"
+                className="uppercase font-primary tracking-[6px] pt-12 pb-11"
               >
       <div className="text-center">
           <div className="font-primary uppercase tracking-[6px] text-[18px] pt-[150px]">
@@ -138,8 +138,8 @@ const Contacts = () => {
       {/* Flota y Contacto */}
       <div className="container mx-auto">
         <div
-          id="hablemos"
-          className="flex flex-col lg:flex-row h-[full] py-24 gap-8"
+          id="info"
+          className="flex flex-col lg:flex-row h-[full] py-12 gap-8"
         >
           {/* left (Flota)*/}
           <motion.div
@@ -149,9 +149,6 @@ const Contacts = () => {
             viewport={{ once: true }}
             className="w-full h-full lg:w-[50%] text-justify px-6 border-2 border-primary rounded-2xl p-8"
           >
-            <h2 className="h2 text-center tracking-[2px] font-semibold">
-              Nuestra Flota
-            </h2>
             <img className="mb-12" alt="flota" src={Flota} />
             <ul className="flex flex-col gap-y-6 text-[22px] font-semibold">
               <li className="flex items-center gap-x-4 font-primary tracking-[1px]">

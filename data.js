@@ -185,10 +185,6 @@ export const necorutaData = [
 
 export const flotaData = [
   {
-    name: "Img1",
-    img: Img1,  
-  },
-  {
     name: "Img2",
     img: Img2,  
   },
@@ -227,10 +223,6 @@ export const flotaData = [
   {
     name: "Img14",
     img: Img14,  
-  },
-  {
-    name: "Img15",
-    img: Img15,  
   },
   {
     name: "Img17",
