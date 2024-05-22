@@ -20,6 +20,13 @@ import Flota from "../assets/college/Flota.jpg";
 
 // Icons
 import { FaCheck } from "react-icons/fa";
+import { TbSquareLetterA } from "react-icons/tb"; //A
+import { TbSquareLetterL } from "react-icons/tb"; //L
+import { IoIosMail } from "react-icons/io"; //email
+import { FaPhoneAlt } from "react-icons/fa"; //phone
+import { FaSearchLocation } from "react-icons/fa"; //street
+import { MdLocationCity } from "react-icons/md"; //city
+import { FaMapLocationDot } from "react-icons/fa6"; //province
 
 // Components
 import Header from "../components/Header";
@@ -28,7 +35,8 @@ import Footer from "../components/Footer";
 // Logo
 import transparentLogo from "../assets/logo/transparentLogo.png";
 
-
+// imgOfi
+import ofi from "../assets/ofi/ofi1.jpg";
 
 const Contacts = () => {
   const formRef = useRef();
@@ -115,136 +123,162 @@ const Contacts = () => {
 
   return (
     <>
-    <Header/>
-    <section>
-      <ScrollToTop />
-      {/* banner */}
-      <div className="bg-oficina bg-cover bg-center h-[560px] relative flex justify-center items-center shadow-2xl">
-        {/* overlay */}
-        <div className="bg-black/70 absolute h-full w-full" />
-        <div className="text-white flex lg:mt-0 pt-[110px] lg:pt-0 flex-col justify-center items-center z-20">
-          <h1 className="lg:text-[75px] text-[63px] font-primary  uppercase tracking-[4px]">
-            Oficina
-          </h1>
-          <div className="flex lg:flex-row flex-col items-center lg:justify-between lg:text-[25px] tracking-[2px] text-[20px] lg:gap-20 gap-8 font-primary min-w-[80%] text-justify lg:mt-4">
-            {/* datos de contacto */}
-            <div className="font-bold">
-              <h2>{direccion}</h2>
-              <h2>{ciudad}</h2>
-              <h2>{provincia}</h2>
-            </div>
-            <div>
-              <h2>{email}</h2>
-              <h2>{logistica}</h2>
-              <h2>{administracion}</h2>
+      <Header />
+      <section>
+        <ScrollToTop />
+        {/* banner */}
+        <div className="bg-oficina bg-cover bg-center h-[560px] relative flex justify-center items-center shadow-2xl">
+          {/* overlay */}
+          <div className="bg-black/70 absolute h-full w-full" />
+          <div className="text-white flex lg:mt-0 pt-[110px] lg:pt-0 flex-col justify-center items-center z-20">
+            <h1 className="lg:text-[75px] text-[63px] font-primary  uppercase tracking-[4px]">
+              Oficina
+            </h1>
+            <div className="flex lg:flex-row flex-col items-center lg:justify-between lg:text-[25px] tracking-[2px] text-[20px] lg:gap-20 gap-8 font-primary min-w-[80%] text-justify lg:mt-4">
+              {/* datos de contacto */}
+              <div className="font-bold">
+                <div className="flex gap-3 items-center">
+                  <FaSearchLocation className="text-[25px]" />
+                  <h2>{direccion}</h2>
+                </div>
+                <div className="flex gap-3 items-center">
+                  <MdLocationCity className="text-[25px]" />
+                  <h2>{ciudad}</h2>
+                </div>
+                <div className="flex gap-3 items-center">
+                  <FaMapLocationDot className="text-[25px]" />
+                  <h2>{provincia}</h2>
+                </div>
+              </div>
+              <div>
+                <div className="flex gap-3 items-center">
+                  <IoIosMail className="text-[25px]" />
+                  <h2>{email}</h2>
+                </div>
+                <div className="flex gap-3 items-center">
+                  <FaPhoneAlt className="text-[20px]" />
+                  <h2>{logistica}</h2>
+                </div>
+                <div className="flex gap-3 items-center">
+                  <FaPhoneAlt className="text-[20px]" />
+                  <h2>{administracion}</h2>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      {/* Flota y Contacto */}
-      <div className="container mx-auto">
-        <div
-          id="hablemos"
-          className="flex flex-col lg:flex-row h-[full] py-24 gap-8"
-        >
-          {/* left (Flota)*/}
-          <motion.div
-            initial={{ x: "-100%", opacity: 0 }}
-            animate={{ x: isVisible ? 0 : "-100%", opacity: isVisible ? 1 : 0 }}
-            transition={{ duration: 1.5 }}
-            viewport={{ once: true }}
-            className="w-full h-full lg:w-[50%] text-justify px-6 rounded-2xl p-8"
+        {/* Flota y Contacto */}
+        <div className="container mx-auto">
+          <div
+            id="hablemos"
+            className="flex flex-col lg:flex-row h-[full] py-24 gap-8"
           >
-            <img src={transparentLogo} alt="" className=""/>
-          </motion.div>
-          {/* right (Contacto) */}
-          <div className="w-full h-full lg:w-[50%] overflow-hidden flex-col">
+            {/* left (Flota)*/}
             <motion.div
-              initial={{ x: "100%", opacity: 0 }}
+              initial={{ x: "-100%", opacity: 0 }}
               animate={{
-                x: isVisible ? 0 : "100%",
+                x: isVisible ? 0 : "-100%",
                 opacity: isVisible ? 1 : 0,
               }}
               transition={{ duration: 1.5 }}
               viewport={{ once: true }}
-              className="p-8 flex-[0.75]  rounded-2xl bg-navHover text-primary"
+              className="w-full h-full lg:w-[50%] text-justify px-5 rounded-2xl p-8 flex flex-col gap-y-[50px]"
             >
-              <p className="font-primary uppercase tracking-[6px] text-[18px]">
-                Póngase en contacto
-              </p>
-              <h3 className="h2">Hablemos.</h3>
-
-              <form
-                ref={formRef}
-                onSubmit={handleSubmit}
-                className="mt-10 flex flex-col gap-8"
-              >
-                <label className="flex flex-col">
-                  <span className="text-primary font-primary font-semibold mb-2">
-                    Tu Nombre
-                  </span>
-                  <input
-                    type="text"
-                    name="name"
-                    value={form.name}
-                    onChange={handleChange}
-                    placeholder="Como es tu nombre?"
-                    className="bg-white rounded-lg py-2 px-4 placeholder:font-primary placeholder:font-semibold outline-none border-none font-primary font-medium"
-                  />
-                </label>
-                <label className="flex flex-col">
-                  <span className="text-primary font-primary font-semibold mb-2">
-                    Asunto
-                  </span>
-                  <input
-                    type="text"
-                    name="affair"
-                    value={form.affair}
-                    onChange={handleChange}
-                    placeholder="Motivo de contacto"
-                    className="bg-white rounded-lg py-2 px-4 placeholder:font-primary placeholder:font-semibold outline-none border-none font-primary font-medium"
-                  />
-                </label>
-                <label className="flex flex-col">
-                  <span className="text-primary font-primary font-semibold mb-2">
-                    Tu Email
-                  </span>
-                  <input
-                    type="email"
-                    name="email"
-                    value={form.email}
-                    onChange={handleChange}
-                    placeholder="Como es tu email?"
-                    className="bg-white rounded-lg py-2 px-4 placeholder:font-primary placeholder:font-semibold outline-none border-none font-primary font-medium"
-                  />
-                </label>
-                <label className="flex flex-col">
-                  <span className="text-primary font-primary font-semibold mb-2">
-                    Tu Mensaje
-                  </span>
-                  <textarea
-                    rows="8"
-                    name="message"
-                    value={form.message}
-                    onChange={handleChange}
-                    placeholder="Escribenos tu mensaje"
-                    className="bg-white rounded-lg py-2 px-4 placeholder:font-primary placeholder:font-semibold outline-none border-none font-primary font-medium"
-                  />
-                </label>
-                {/* button */}
-                <button
-                  type="submit"
-                  className="font-primary font-bold outline-none w-fit py-2 px-5 shadow-lg  bg-primary text-secondHover rounded-xl"
-                >
-                  {loading ? "Sending..." : "Send"}
-                </button>
-              </form>
+              <img src={transparentLogo} alt="" className="h-[322px]" />
+              <img
+                src={ofi}
+                alt=""
+                className="rounded-xl h-[380px] shadow-2xl"
+              />
             </motion.div>
+            {/* right (Contacto) */}
+            <div className="w-full h-full lg:w-[50%] overflow-hidden flex-col">
+              <motion.div
+                initial={{ x: "100%", opacity: 0 }}
+                animate={{
+                  x: isVisible ? 0 : "100%",
+                  opacity: isVisible ? 1 : 0,
+                }}
+                transition={{ duration: 1.5 }}
+                viewport={{ once: true }}
+                className="p-8 flex-[0.75]  rounded-2xl bg-navHover text-primary shadow-xl"
+              >
+                <p className="font-primary uppercase tracking-[6px] text-[18px]">
+                  Póngase en contacto
+                </p>
+                <h3 className="h2">Hablemos.</h3>
+
+                <form
+                  ref={formRef}
+                  onSubmit={handleSubmit}
+                  className="mt-5 flex flex-col gap-7"
+                >
+                  <label className="flex flex-col">
+                    <span className="text-primary font-primary font-semibold mb-2">
+                      Tu Nombre
+                    </span>
+                    <input
+                      type="text"
+                      name="name"
+                      value={form.name}
+                      onChange={handleChange}
+                      placeholder="Como es tu nombre?"
+                      className="bg-white rounded-lg py-2 px-4 placeholder:font-primary placeholder:font-semibold outline-none border-none font-primary font-medium"
+                    />
+                  </label>
+                  <label className="flex flex-col">
+                    <span className="text-primary font-primary font-semibold mb-2">
+                      Asunto
+                    </span>
+                    <input
+                      type="text"
+                      name="affair"
+                      value={form.affair}
+                      onChange={handleChange}
+                      placeholder="Motivo de contacto"
+                      className="bg-white rounded-lg py-2 px-4 placeholder:font-primary placeholder:font-semibold outline-none border-none font-primary font-medium"
+                    />
+                  </label>
+                  <label className="flex flex-col">
+                    <span className="text-primary font-primary font-semibold mb-2">
+                      Tu Email
+                    </span>
+                    <input
+                      type="email"
+                      name="email"
+                      value={form.email}
+                      onChange={handleChange}
+                      placeholder="Como es tu email?"
+                      className="bg-white rounded-lg py-2 px-4 placeholder:font-primary placeholder:font-semibold outline-none border-none font-primary font-medium"
+                    />
+                  </label>
+                  <label className="flex flex-col">
+                    <span className="text-primary font-primary font-semibold mb-2">
+                      Tu Mensaje
+                    </span>
+                    <textarea
+                      rows="8"
+                      name="message"
+                      value={form.message}
+                      onChange={handleChange}
+                      placeholder="Escribenos tu mensaje"
+                      className="bg-white rounded-lg py-2 px-4 placeholder:font-primary placeholder:font-semibold outline-none border-none font-primary font-medium"
+                    />
+                  </label>
+                  {/* button */}
+                  <button
+                    type="submit"
+                    className="font-primary font-bold outline-none w-fit py-2 px-5 shadow-lg  bg-primary text-secondHover rounded-xl"
+                  >
+                    {loading ? "Sending..." : "Send"}
+                  </button>
+                </form>
+              </motion.div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <Footer/>
+      </section>
+      <Footer />
     </>
   );
 };
