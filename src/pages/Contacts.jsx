@@ -38,6 +38,7 @@ import transparentLogo from "../assets/logo/transparentLogo.png";
 // imgOfi
 import ofi from "../assets/ofi/ofi1.jpg";
 
+
 const Contacts = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
@@ -127,7 +128,7 @@ const Contacts = () => {
       <section>
         <ScrollToTop />
         {/* banner */}
-        <div className="bg-oficina bg-cover bg-center h-[560px] relative flex justify-center items-center shadow-2xl">
+        <div className="bg-outOfi bg-cover bg-center h-[560px] relative flex justify-center items-center shadow-2xl">
           {/* overlay */}
           <div className="bg-black/70 absolute h-full w-full" />
           <div className="text-white flex lg:mt-0 pt-[110px] lg:pt-0 flex-col justify-center items-center z-20">
@@ -150,16 +151,16 @@ const Contacts = () => {
                   <h2>{provincia}</h2>
                 </div>
               </div>
-              <div>
-                <div className="flex gap-3 items-center">
+              <div className="px-8">
+                <div className="flex gap-3 items-center lg:text-[25px] text-[15px]">
                   <IoIosMail className="text-[25px]" />
                   <h2>{email}</h2>
                 </div>
-                <div className="flex gap-3 items-center">
+                <div className="flex gap-3 items-center lg:text-[25px] text-[15px]">
                   <FaPhoneAlt className="text-[20px]" />
                   <h2>{logistica}</h2>
                 </div>
-                <div className="flex gap-3 items-center">
+                <div className="flex gap-3 items-center lg:text-[25px] text-[15px]">
                   <FaPhoneAlt className="text-[20px]" />
                   <h2>{administracion}</h2>
                 </div>
@@ -171,7 +172,7 @@ const Contacts = () => {
         <div className="container mx-auto">
           <div
             id="hablemos"
-            className="flex flex-col lg:flex-row h-[full] py-24 gap-8"
+            className="flex flex-col lg:flex-row h-full py-24 gap-8"
           >
             {/* left (Flota)*/}
             <motion.div
@@ -184,11 +185,11 @@ const Contacts = () => {
               viewport={{ once: true }}
               className="w-full h-full lg:w-[50%] text-justify px-5 rounded-2xl p-8 flex flex-col gap-y-[50px]"
             >
-              <img src={transparentLogo} alt="" className="h-[322px]" />
+              <img src={transparentLogo} alt="" className="h-[322px] w-full" />
               <img
                 src={ofi}
                 alt=""
-                className="rounded-xl h-[380px] shadow-2xl"
+                className="rounded-xl h-[380px] w-full shadow-2xl"
               />
             </motion.div>
             {/* right (Contacto) */}
