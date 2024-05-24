@@ -31,8 +31,8 @@ const FlotaSlider = () => {
   // console.log("FLOTA", flota);
 
   return (
-    <div className="flex items-center justify-center flex-col h-[500px] bg-primary shadow-2xl relative">
-      <div className="py-[320px] w-full mx-auto absolute -top-4 lg:shadow-1 bg-primary bg-transparent backdrop-blur rounded-lg" />
+    <div className="flex items-center justify-center flex-col lg:h-[500px] h-[400px] bg-primary shadow-2xl relative">
+      <div className="lg:py-[320px] py-[280px] w-full mx-auto absolute -top-4 lg:shadow-1 bg-primary bg-transparent backdrop-blur rounded-lg" />
       <Swiper
         breakpoints={{
           340: {
@@ -56,7 +56,7 @@ const FlotaSlider = () => {
         {flota.map((flot, index) => (
           <SwiperSlide key={flot.name}>
             <div
-              className="flex flex-col gap-6 group relative shadow-lg scale-100 text-white rounded-xl h-full w-full lg:h-[380px] lg:w-[360px] overflow-hidden cursor-pointer"
+              className="flex flex-col gap-6 group relative shadow-lg scale-100 text-white rounded-xl h-[250px] w-full lg:h-[380px] lg:w-[360px] overflow-hidden cursor-pointer"
               onClick={() => scrollToSection("info")}
             >
               <img src={flot.img} alt="img" className="h-full w-full" />

@@ -29,7 +29,8 @@ export default {
     },
     backgroundImage:{
       oficina:"url('./assets/ofi/ofi1.jpg')",
-      camiones:"url('./assets/img/11.jpg')"
+      camiones:"url('./assets/img/11.jpg')",
+      outOfi:"url('./assets/ofi/outOfi.jpg')"
     },
     zoom: {
       '90': '90%',

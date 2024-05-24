@@ -67,7 +67,7 @@ const HeroSlider = () => {
       effect={"fade"}
       loop={true}
       autoplay={{ delay: 3000, disableOnInteraction: false }}
-      className="heroSlider h-[600px] lg:h-[860px] shadow-2xl"
+      className="heroSlider h-[625px] lg:h-[860px] shadow-2xl"
     >
       {slides.map((slide, index) => {
         const { title, bg, btnText } = slide;

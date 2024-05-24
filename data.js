@@ -189,10 +189,6 @@ export const flotaData = [
     img: Img2,  
   },
   {
-    name: "Img4",
-    img: Img4,  
-  },
-  {
     name: "Img5",
     img: Img5,  
   },
