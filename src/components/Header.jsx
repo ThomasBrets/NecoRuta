@@ -8,6 +8,7 @@ import RoundLogo from "../assets/logo/roundLogo.png";
 
 // Utils
 import { scrollToSection } from "../utils/scrollToSection";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [header, setHeader] = useState(false);
@@ -26,7 +27,7 @@ const Header = () => {
     >
       <div className="container m-auto flex flex-col items-center gap-y-6 lg:flex-row lg:justify-between lg:gap-y-0">
         {/* logo */}
-        <a href="/">
+        <a to="/">
           {header ? (
             <img className="w-[70px] bg-white p-1 rounded-[100%]" src={RoundLogo} />
           ) : (
@@ -36,38 +37,38 @@ const Header = () => {
         <nav
           className={`text-white flex gap-x-4 font-primary tracking-3px text-[18px] items-center uppercase lg:gap-x-8`}
         >
-          <a
-            href="/"
+          <Link
+            to="/"
             className={`${
               header ? "hover:text-secondHover" : "hover:text-navHover"
             } transition-all tracking-[1px] duration-500`}
           >
             Inicio
-          </a>
-          <a
-            href="/flota"
+          </Link>
+          <Link
+            to="/flota"
             className={`${
               header ? "hover:text-secondHover" : "hover:text-navHover"
             } transition-all tracking-[1px] duration-500`}
           >
             Flota
-          </a>
-          <a
-            href="/map"
+          </Link>
+          <Link
+            to="/map"
             className={`${
               header ? "hover:text-secondHover" : "hover:text-navHover"
             } transition-all tracking-[1px] duration-500`}
           >
             Mapa
-          </a>
-          <a
-            href="/contacts"
+          </Link>
+          <Link
+            to="/contacts"
             className={`${
               header ? "hover:text-secondHover" : "hover:text-navHover"
             } transition-all tracking-[1px] duration-500`}
           >
             Contacto
-          </a>
+          </Link>
         </nav>
       </div>
     </header>
