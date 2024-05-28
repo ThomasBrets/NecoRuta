@@ -28,6 +28,9 @@ import { TbNavigationNorth } from "react-icons/tb";
 // react-router-dom
 import { Link } from "react-router-dom";
 
+//ScrollToTop component
+import ScrollToTop from "../components/ScrollToTop";
+
 const customIcon = new Icon({
   iconUrl: RoundLogo,
   iconSize: [55, 55], //Size of the icon
@@ -76,6 +79,7 @@ const Map = () => {
 
   return (
     <div className="flex flex-row z-10 relative">
+      <ScrollToTop />
       {showAlert && ( // Mostrar el cartel solo si showAlert es true
         // Fondo oscuro semitransparente como overlay
         <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-70 flex items-center justify-center z-50">
@@ -283,7 +287,7 @@ const Map = () => {
           ))}
         </MapContainer>
       </div>
-      <div className={`absolute bottom-4 right-4 z-50`}>
+      <div className={`absolute bottom-9   right-4 z-50`}>
         <img
           src={transparentLogo}
           alt="Transparent Logo"
