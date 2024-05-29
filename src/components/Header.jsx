@@ -27,13 +27,13 @@ const Header = () => {
     >
       <div className="container m-auto flex flex-col items-center gap-y-6 lg:flex-row lg:justify-between lg:gap-y-0">
         {/* logo */}
-        <a to="/">
+        <Link to="/">
           {header ? (
             <img className="w-[70px] bg-white p-1 rounded-[100%]" src={RoundLogo} />
           ) : (
             <img className="w-[180px]" src={TransparentLogo} />
           )}
-        </a>
+        </Link>
         <nav
           className={`text-white flex gap-x-4 font-primary tracking-3px text-[18px] items-center uppercase lg:gap-x-8`}
         >
