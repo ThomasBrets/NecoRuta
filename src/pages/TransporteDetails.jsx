@@ -22,7 +22,8 @@ import Flota from "../assets/college/Flota.jpg";
 import { FaCheck } from "react-icons/fa";
 
 // Components
-import Header from "../components/Header"
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 // Logo
 import transparentLogo from "../assets/logo/transparentLogo.png";
@@ -121,28 +122,29 @@ const TransporteDetails = () => {
       });
   };
 
-
   return (
     <>
-    <Header/>
-    <section>
-      <ScrollToTop />
-      {/* banner */}
-      <div className="bg-camiones bg-cover bg-center h-[560px] relative flex justify-center items-center">
-        {/* overlay */}
-        <div className="bg-black/70 absolute h-full w-full" />
-        <div className="text-white flex lg:mt-0 pt-[110px] lg:pt-0 px-10 flex-col justify-center items-center z-20">
-          <h1 className="lg:text-[75px] text-[41px] font-primary text-center  uppercase tracking-[4px]">{name}</h1>
+      <Header />
+      <section>
+        <ScrollToTop />
+        {/* banner */}
+        <div className="bg-camiones bg-cover bg-center h-[560px] relative flex justify-center items-center">
+          {/* overlay */}
+          <div className="bg-black/70 absolute h-full w-full" />
+          <div className="text-white flex lg:mt-0 pt-[110px] lg:pt-0 px-10 flex-col justify-center items-center z-20">
+            <h1 className="lg:text-[75px] text-[41px] font-primary text-center  uppercase tracking-[4px]">
+              {name}
+            </h1>
+          </div>
         </div>
-      </div>
-      {/* Flota y Contacto */}
-      <div className="container mx-auto">
-        <div
-          id="hablemos"
-          className="flex flex-col lg:flex-row h-[full] py-24 gap-8"
-        >
-          {/* left (Flota)*/}
-          <motion.div
+        {/* Flota y Contacto */}
+        <div className="container mx-auto">
+          <div
+            id="hablemos"
+            className="flex flex-col lg:flex-row h-[full] py-24 gap-8"
+          >
+            {/* left (Flota)*/}
+            <motion.div
               initial={{ x: "-100%", opacity: 0 }}
               animate={{
                 x: isVisible ? 0 : "-100%",
@@ -159,8 +161,8 @@ const TransporteDetails = () => {
                 className="rounded-xl h-[380px] shadow-2xl"
               />
             </motion.div>
-          {/* right (Contacto) */}
-          <div className="w-full h-full lg:w-[50%] overflow-hidden flex-col">
+            {/* right (Contacto) */}
+            <div className="w-full h-full lg:w-[50%] overflow-hidden flex-col">
               <motion.div
                 initial={{ x: "100%", opacity: 0 }}
                 animate={{
@@ -174,7 +176,7 @@ const TransporteDetails = () => {
                 <p className="font-primary uppercase tracking-[6px] text-[18px]">
                   Póngase en contacto
                 </p>
-                <h3 className="h2">Hablemos.</h3>
+                <h3 className="font-primary text-[45px] mb-4">Hablemos.</h3>
 
                 <form
                   ref={formRef}
@@ -243,9 +245,10 @@ const TransporteDetails = () => {
                 </form>
               </motion.div>
             </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <Footer />
     </>
   );
 };
