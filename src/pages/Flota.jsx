@@ -183,28 +183,28 @@ const Contacts = () => {
                 className="p-8  rounded-2xl bg-navHover text-primary font-primary"
               >
                 <h3 className="h2">Nuestros Camiones.</h3>
-                <ul className="flex flex-col gap-y-6 text-[22px] text-black">
-                  <li className="flex justify-start  gap-x-4 font-primary tracking-[1px]">
+                <ul className="flex flex-col gap-y-6 text-[23px] text-black">
+                  <li className="flex justify-start  gap-x-4 font-primary  text-justify lg:tracking-normal tracking-tighter">
                     <div className="flex items-center">
                       <FaCheck className="text-primary w-[23px] h-[23px]" />
                     </div>
                     Todos nuestros camiones están habilitados por SENASA (
                     Servicio Nacional de Sanidad y Calidad Agroalimentaria ).
                   </li>
-                  <li className="flex items-center gap-x-4 font-primary tracking-[1px]">
+                  <li className="flex items-center gap-x-4 font-primary  text-justify lg:tracking-normal tracking-tighter">
                     <div className="flex items-start">
                       <FaCheck className="text-primary w-[24px] h-[24px]" />
                     </div>
                     Equipados con sistema de seguimiento satelital en tiempo
                     real.
                   </li>
-                  <li className="flex items-center gap-x-4 font-primary tracking-[1px]">
+                  <li className="flex items-center gap-x-4 font-primary text-justify lg:tracking-normal tracking-tighter">
                     <div className="flex items-start">
                       <FaCheck className="text-primary w-[24px] h-[24px]" />
                     </div>
                     Permisos correspondientes para circular :
                   </li>
-                  <ul className="font-primary justify-start flex flex-col gap-y-3 pl-9">
+                  <ul className="font-primary justify-start flex flex-col gap-y-4 pl-9 mt-4 mb-4">
                     <li className="flex gap-2 items-center">
                       <IoArrowForwardCircle className="text-primary" />
                       Licencia de conducir
