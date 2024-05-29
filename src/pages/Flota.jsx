@@ -218,7 +218,7 @@ const Contacts = () => {
                       VTV
                     </li>
                     <li className="flex gap-2 items-center">
-                      <IoArrowForwardCircle className="text-primary" />
+                      <IoArrowForwardCircle className="text-primary lg:text-[25px] text-[45px]" />
                       Registro único de transporte automotor ( RUTA)
                     </li>
                     <li className="flex gap-2 items-center">
