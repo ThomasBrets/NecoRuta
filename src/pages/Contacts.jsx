@@ -207,7 +207,7 @@ const Contacts = () => {
                 <p className="font-primary uppercase tracking-[6px] text-[18px]">
                   Póngase en contacto
                 </p>
-                <h3 className="h2">Hablemos.</h3>
+                <h3 className="font-primary text-[45px] mb-4">Hablemos.</h3>
 
                 <form
                   ref={formRef}
