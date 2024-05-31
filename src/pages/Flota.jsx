@@ -128,7 +128,7 @@ const Contacts = () => {
             <div className="font-primary uppercase tracking-[6px] text-[18px] pt-[150px]">
               Necoruta S.A.
             </div>
-            <div className="font-primary text-[45px] mb-4">Nuestra Flota</div>
+            <div className="font-primary lg:text-[45px] text-[40px] mb-4 px-2">Nuestra Flota</div>
           </div>
         </motion.div>
         {/* Swiper */}
