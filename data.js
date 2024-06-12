@@ -169,6 +169,10 @@ export const markersData = [
     geocode: [-40.10385433436149, -64.45868360543507],
     popUp: "General Conesa",
   },
+  {
+    geocode: [-43.08804035672362, -71.46259816986452],
+    popUp: "Trevelin"
+  }
 ];
 
 export const necorutaData = [
