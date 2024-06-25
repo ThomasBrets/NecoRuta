@@ -85,7 +85,7 @@ const HeroSlider = () => {
                 animate="visible"
                 className="uppercase font-primary tracking-[6px] mb-5"
               >
-                Desde 2009 brindamos servicios de transporte de cargas generales
+                Desde 2008 brindamos servicios de transporte de cargas generales
               </motion.div>
               <motion.h1
                 variants={titleVariants}
