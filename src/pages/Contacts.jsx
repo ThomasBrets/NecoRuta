@@ -52,6 +52,31 @@ const Contacts = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    const script = document.createElement("script");
+    script.innerHTML = `
+      function gtagSendEvent(url) {
+        var callback = function () {
+          if (typeof url === 'string') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'conversion_event_contact', {
+          'event_callback': callback,
+          'event_timeout': 2000,
+        });
+        return false;
+      }
+    `;
+    document.head.appendChild(script);
+    
+    return () => {
+      document.head.removeChild(script); // Limpiar el script al desmontar el componente
+    };
+  }, []);
+
+
+
+  useEffect(() => {
     const handleScroll = () => {
       const section = document.getElementById("hablemos");
       if (section) {
